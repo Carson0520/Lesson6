@@ -2,14 +2,14 @@ package guessinggame;
 
 class guessGame {
     GuessMachine gm = new GuessMachine();
-    private int number;
-    private int numguesses;
-    private int myguess;
+    private int answer;
+    private int guessnum;
+    private int guess;
 
     public guessGame() {
-        numguesses = 0;
-        number = (int) (Math.random() * 100 + 1);
-        myguess = 0;
+        guessnum = 0;
+        answer = (int) (Math.random() * 100 + 1);
+        guess = 0;
 
     }
 
@@ -34,11 +34,11 @@ class guessGame {
     }
 
     public int getNumGuess() {
-        return numguesses;
+        return guessnum;
     }
-    public void submit(){
+    public String submit(){
         if (guess<answer){
-            gm.answerlbl.setText("You guessed a "+guess+". Too low guess HIGHER");
+            return "You guessed a "+guess+". Too low guess HIGHER";
         }
         else if(guess>answer)
         {

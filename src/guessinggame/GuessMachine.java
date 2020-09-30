@@ -14,6 +14,7 @@ public class GuessMachine extends javax.swing.JFrame {
     /**
      * Creates new form GuessMachine
      */
+    double g;
     guessGame gg = new guessGame();
     public GuessMachine() {
         initComponents();
@@ -118,6 +119,7 @@ public class GuessMachine extends javax.swing.JFrame {
 
     private void guesstxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guesstxtActionPerformed
         // TODO add your handling code here:
+        g = guesstxt.getText();
     }//GEN-LAST:event_guesstxtActionPerformed
 
     private void submitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbtnActionPerformed
