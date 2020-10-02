@@ -35,7 +35,7 @@ public class Employee {
     }
 
     public boolean setRate(double rt){
-        boolean rateok = rt >=6.75 && rt <=30.50;
+        boolean rateok = rate >=6.75 && rate <=30.50;
                 if(rateok){
                     return true;
                 }
