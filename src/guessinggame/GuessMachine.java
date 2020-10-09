@@ -1,23 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package guessinggame;
 
-/**
- *
- * @author cars0520
- */
 public class GuessMachine extends javax.swing.JFrame {
+
+    GuessGameClass f = new GuessGameClass();
 
     /**
      * Creates new form GuessMachine
      */
-    double g;
-    guessGame gg = new guessGame();
     public GuessMachine() {
         initComponents();
+        f.setNumber();
+
+        //So I know what the number is
+       // System.out.println(f.number);
     }
 
     /**
@@ -119,12 +114,33 @@ public class GuessMachine extends javax.swing.JFrame {
 
     private void guesstxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guesstxtActionPerformed
         // TODO add your handling code here:
-        g = guesstxt.getText();
+
     }//GEN-LAST:event_guesstxtActionPerformed
 
     private void submitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbtnActionPerformed
-        gg.giveResult();
+
+        f.myguess = Integer.parseInt(guesstxt.getText());
+        if (f.myguess == f.number) {
+            answerlbl.setText("Good job! you got it");
+            //no longer necessary
+            //System.out.println("it took only " + f.numguess + " guesses!");
+            
         
+                } else if (f.myguess>100 || f.myguess<1) {
+            answerlbl.setText("Invalid");
+            f.numguess++;
+            guesslbl.setText("" + f.numguess);
+        }else if (f.myguess > f.number) {
+            answerlbl.setText("Too high, guess lower");
+            f.numguess++;
+            guesslbl.setText("" + f.numguess);
+
+        } else if (f.myguess < f.number) {
+            answerlbl.setText("Too low, guess higher");
+            f.numguess++;
+            guesslbl.setText("" + f.numguess);
+
+}
     }//GEN-LAST:event_submitbtnActionPerformed
 
     /**
