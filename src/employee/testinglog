@@ -38,13 +38,13 @@ Test #                  Description                               Expected      
 1(Code Coverage)         Rate:10,Type:1,Hours:30                  300
 2(Code Coverage)         Rate:10,Type:1,Hours:50                  400+200=600
 
-3(Boundary)              Rate:10,Type:1,Hours:39,40,41            OT only for 41
+3(Boundary)              Rate:10,Type:1,Hours:39,40,41            OT only for 41                  390,400,420
 
-4(Extreme)               Rate:10,Type:1,Hours:0 & 168             Hours not set
+4(Extreme)               Rate:10,Type:1,Hours:0 & 168             Hours not set                             loops back and asks for hours again,
 
-5(boundary)             r: t: 1 6.49,6.50,30.50,30.51 h:10       rate only set #2&3
+5(boundary)             r: t: 1 6.49,6.50,30.50,30.51 h:10       rate only set #2&3              program  crashes when type is decimal
 
-6(boundary)             r: 10  t:2    h: 0,1,60,61               hours only set for #2&3
+6(boundary)             r: 10  t:2    h: 0,1,60,61               hours only set for #2&3            $10,  600, 
 
-7(boundary)             r:10 t:0,1,2,3 h:10                      type only set for #2 and #3
+7(boundary)             r:10 t:0,1,2,3 h:10                      type only set for #2 and #3        $100,  
                                                                  OT only for type 1, not 2

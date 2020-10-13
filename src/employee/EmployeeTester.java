@@ -35,7 +35,7 @@ public class EmployeeTester {
             while (true) {
                 System.out.println("Enter hours: " + emp.getHourRules());
                 hours = scan.nextInt();
-                if (emp.setHours(hours)) {
+                if (emp.setHours((int)hours)) {
                     break;
                 }
             }
@@ -48,7 +48,7 @@ public class EmployeeTester {
             }
             System.out.println("---------------------");
             System.out.println("Pay this week for " + emp.getName());
-            System.out.println("$" + emp.getPay());
+            System.out.println("$" + emp.getPay(hours,(int)rate));
             System.out.println("\nEnter another? y or n >");
             prompt = scan.next();
             scan.nextLine();
