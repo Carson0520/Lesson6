@@ -51,7 +51,6 @@ public class GuessMachine extends javax.swing.JFrame {
         answerlbl.setBackground(new java.awt.Color(255, 255, 255));
         answerlbl.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         answerlbl.setForeground(new java.awt.Color(255, 0, 0));
-        answerlbl.setText("jLabel2");
         answerlbl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         answerlbl.setOpaque(true);
 
