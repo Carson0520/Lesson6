@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Lazyd
  */
-public class NewMain {
+public class Testing {
 
     /**
      * @param args the command line arguments
@@ -26,7 +26,7 @@ public class NewMain {
         b5 = new Book("To Be a Model", "Lisa Lahey");
         System.out.println("Here are the books available: ");
         System.out.println(b1.getTitle());
-        System.out.println(b2);
+        System.out.format("%s by: %s",b2.getTitle(), b2.getAuthor());
 
     }
     

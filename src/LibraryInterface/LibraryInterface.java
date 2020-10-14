@@ -10,15 +10,16 @@ public class LibraryInterface {
         b4 = new Book("Good Housekeeping", "Pat Burns");
         b5 = new Book("To Be a Model", "Lisa Lahey");
         System.out.println("Here are the books available: ");
-        System.out.println(b1);
-        System.out.println(b2);
-        System.out.println(b3);
-        System.out.println(b4);
-        System.out.println(b5);
+        System.out.format("%s by: %s\n",b1.getTitle(), b1.getAuthor());
+        System.out.format("%s by: %s\n",b2.getTitle(), b2.getAuthor());
+        System.out.format("%s by: %s\n",b3.getTitle(), b3.getAuthor());
+        System.out.format("%s by: %s\n",b4.getTitle(), b4.getAuthor());
+        System.out.format("%s by: %s\n",b5.getTitle(), b5.getAuthor());
+        System.out.println("=======================================================================");
         Patron p = new Patron("Miles Davis");
 
         //lend books out
-        System.out.println("Lending 4 books to " + p.getName());
+        System.out.println("Lending 3 books to " + p.getName());
         if (p.borrow(b1)) {
             System.out.println(b1.getTitle() + " successfully borrowed");
         } else {
@@ -41,6 +42,11 @@ public class LibraryInterface {
             System.out.println(b4.getTitle() + " successfully borrowed");
         } else {
             System.out.println(b4.getTitle() + " could not be borrowed");
+        }
+        if (p.borrow(b5)) {
+            System.out.println(b5.getTitle() + " successfully borrowed");
+        } else {
+            System.out.println(b5.getTitle() + " could not be borrowed");
         }
 
         //return books
@@ -66,5 +72,5 @@ public class LibraryInterface {
         if (p.hasBook(b5)) {
             System.out.println(b5);
         }
-}
+    }
 }
